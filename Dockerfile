@@ -2,11 +2,14 @@ FROM ubuntu:21.10 AS BASE
 
 ARG DEBIAN_FRONTEND="noninteractive"
 
-RUN apt-get update \
-    && apt-get install -y git equivs devscripts ca-certificates \
-    && rm -rf /var/lib/apt-get/lists/*
+RUN apt-get update
 
-FROM BASE as BUILD
+RUN apt-get install -y \
+    ca-certificates \
+    devscripts \
+    equivs \
+    git \
+    rm -rf "/var/lib/apt-get/lists/*"
 
 WORKDIR /
 
