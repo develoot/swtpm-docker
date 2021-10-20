@@ -8,6 +8,7 @@ RUN apt-get install -y devscripts
 RUN apt-get install -y equivs
 RUN apt-get install -y git
 RUN apt-get install -y tpm2-tools
+RUN apt-get install -y vim
 
 WORKDIR /
 COPY build-swtpm.sh .
