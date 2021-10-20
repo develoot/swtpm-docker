@@ -3,8 +3,10 @@ FROM ubuntu:21.10 AS BASE
 ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update \
-    && apt-get install -y ca-certificates \
+    && apt-get install -y git equivs devscripts ca-certificates \
     && rm -rf /var/lib/apt-get/lists/*
+
+FROM BASE as BUILD
 
 WORKDIR /
 
