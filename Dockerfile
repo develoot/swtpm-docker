@@ -5,11 +5,12 @@ ARG DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update
 
 RUN apt-get install -y \
-    ca-certificates \
-    devscripts \
-    equivs \
-    git \
-    rm -rf "/var/lib/apt-get/lists/*"
+        ca-certificates \
+        devscripts \
+        equivs \
+        git \
+        tpm2-tools \
+    && rm -rf /var/lib/apt-get/lists/*
 
 WORKDIR /
 
