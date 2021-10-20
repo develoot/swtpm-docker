@@ -1,0 +1,5 @@
+#!/bin/bash
+
+swtpm_ioctl -i --tcp :2322
+tpm2_startup -c
+
