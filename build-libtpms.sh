@@ -16,8 +16,7 @@ mk-build-deps \
   --tool='apt-get --no-install-recommends -y' \
   ./debian/control
 
-./autogen.sh --with-tpm2 --with-openssl --prefix="/usr"
-
+./autogen.sh --with-tpm2 --with-openssl
 make -j"$(nproc)"
 make -j"$(nproc)" check
 make install

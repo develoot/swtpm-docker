@@ -16,8 +16,7 @@ mk-build-deps \
   --tool='apt-get --no-install-recommends -y' \
   ./debian/control
 
-./autogen.sh --prefix="/usr"
-
+./autogen.sh
 make -j"$(nproc)"
 make -j"$(nproc)" check
 make install
