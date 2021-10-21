@@ -13,7 +13,7 @@ git checkout "v0.6.1"
 mk-build-deps \
   --install \
   --build-dep \
-  '--tool=apt-get --no-install-recommends -y' \
+  --tool='apt-get --no-install-recommends -y' \
   ./debian/control
 
 ./autogen.sh --prefix="/usr"
