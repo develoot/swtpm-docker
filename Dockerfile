@@ -7,6 +7,7 @@ RUN apt-get install --no-install-recommends -y ca-certificates
 RUN apt-get install --no-install-recommends -y devscripts
 RUN apt-get install --no-install-recommends -y equivs
 RUN apt-get install --no-install-recommends -y git
+RUN apt-get install --no-install-recommends -y python3-pip
 RUN apt-get install --no-install-recommends -y tpm2-tools
 RUN apt-get install --no-install-recommends -y vim
 
