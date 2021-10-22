@@ -10,11 +10,28 @@ readonly URL="https://github.com/stefanberger/swtpm"
 git clone "${URL}"; cd swtpm
 git checkout "v0.6.1"
 
-mk-build-deps \
-  --install \
-  --build-dep \
-  --tool="apt-get --no-install-recommends -y" \
-  ./debian/control
+apt install -y \
+  autoconf \
+  automake \
+  build-essential \
+  expect \
+  gawk \
+  gnutls-bin \
+  gnutls-dev \
+  libfuse-dev \
+  libglib2.0-dev \
+  libgmp-dev \
+  libseccomp-dev \
+  libssl-dev \
+  libtasn1-dev \
+  libtool \
+  libjson-glib-dev \
+  net-tools \
+  python3-cryptography \
+  python3-setuptools \
+  python3-twisted \
+  socat \
+  softhsm2
 
 ./autogen.sh
 make -j"$(nproc)"
