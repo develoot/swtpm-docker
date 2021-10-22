@@ -19,7 +19,7 @@ apt install -y \
   libtool \
   libtss2-dev \
   pkg-config \
-  python-yaml \
+  python3-yaml \
   uuid-dev
 
 ./bootstrap
