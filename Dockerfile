@@ -8,7 +8,6 @@ RUN apt-get install --no-install-recommends -y devscripts
 RUN apt-get install --no-install-recommends -y equivs
 RUN apt-get install --no-install-recommends -y git
 RUN apt-get install --no-install-recommends -y python3-pip
-RUN apt-get install --no-install-recommends -y tpm2-tools
 RUN apt-get install --no-install-recommends -y vim
 
 WORKDIR /
@@ -20,6 +19,10 @@ RUN rm ./build-libtpms.sh
 COPY build-swtpm.sh .
 RUN ./build-swtpm.sh
 RUN rm ./build-swtpm.sh
+
+COPY build-tpm2-tools.sh .
+RUN ./build-tpm2-tools.sh
+RUN rm ./build-tpm2-tools.sh
 
 WORKDIR /workspace
 
