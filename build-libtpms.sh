@@ -1,13 +1,10 @@
 #!/bin/bash
+set -o errexit -o noglob -o nounset -o pipefail
 
-set -o errexit
-set -o noglob
-set -o nounset
-set -o pipefail
+readonly url="https://github.com/stefanberger/libtpms.git"
 
-readonly URL="https://github.com/stefanberger/libtpms.git"
-
-git clone "${URL}"; cd libtpms
+git clone "${url}"
+cd libtpms
 git checkout "v0.9.0"
 
 mk-build-deps \

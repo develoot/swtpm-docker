@@ -1,9 +1,5 @@
 #!/bin/bash
-
-set -o errexit
-set -o noglob
-set -o nounset
-set -o pipefail
+set -o errexit -o noglob -o nounset -o pipefail
 
 readonly URL="https://github.com/tpm2-software/tpm2-tools.git"
 

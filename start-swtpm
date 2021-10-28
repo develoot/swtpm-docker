@@ -1,6 +1,8 @@
 #!/bin/bash
 
-LD_LIBRARY_PATH=/usr/local/lib swtpm socket \
+[[ -d swtpmdir ]] || mkdir swtpmdir
+
+swtpm socket \
   --tpmstate dir=swtpmdir \
   --tpm2 \
   --ctrl type=tcp,port=2322 \

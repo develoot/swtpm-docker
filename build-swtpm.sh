@@ -1,13 +1,10 @@
 #!/bin/bash
-
-set -o errexit
-set -o noglob
-set -o nounset
-set -o pipefail
+set -o errexit -o noglob -o nounset -o pipefail
 
 readonly URL="https://github.com/stefanberger/swtpm"
 
-git clone "${URL}"; cd swtpm
+git clone "${URL}"
+cd swtpm
 git checkout "v0.6.1"
 
 apt install -y \
