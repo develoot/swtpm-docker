@@ -1,1 +1,3 @@
-Anti pattern, huh?
+# swtpm-docker
+
+Docker image for testing TPM implementation.
