@@ -19,9 +19,6 @@ RUN ./build-libtpms.sh
 COPY build-swtpm.sh .
 RUN ./build-swtpm.sh
 
-COPY build-tpm2-tools.sh .
-RUN ./build-tpm2-tools.sh
-
 WORKDIR /workspace
 
 RUN mkdir bin
