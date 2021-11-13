@@ -1,11 +1,9 @@
 #!/bin/bash
-
-[[ -d swtpmdir ]] || mkdir swtpmdir
+set -o errexit -o noglob -o nounset -o pipefail
 
 swtpm socket \
-  --tpmstate dir=swtpmdir \
+  --tpmstate dir="${SWTPM_STATE_DIR}" \
   --tpm2 \
   --ctrl type=tcp,port=2322 \
   --server type=tcp,port=2321 \
   --flags not-need-init
-

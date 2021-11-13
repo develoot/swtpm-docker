@@ -1,11 +1,9 @@
 #!/bin/bash
 set -o errexit -o noglob -o nounset -o pipefail
 
-readonly url="https://github.com/stefanberger/libtpms.git"
-
-git clone "${url}"
+readonly URL="https://github.com/stefanberger/libtpms.git"
+git clone --depth 1 --branch "v0.9.0" "${URL}"
 cd libtpms
-git checkout "v0.9.0"
 
 mk-build-deps \
   --install \

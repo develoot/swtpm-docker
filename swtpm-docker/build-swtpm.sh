@@ -2,10 +2,8 @@
 set -o errexit -o noglob -o nounset -o pipefail
 
 readonly URL="https://github.com/stefanberger/swtpm"
-
-git clone "${URL}"
+git clone --depth 1 --branch "v0.6.1" "${URL}"
 cd swtpm
-git checkout "v0.6.1"
 
 apt install -y \
   autoconf \
@@ -34,4 +32,3 @@ apt install -y \
 make -j"$(nproc)"
 make -j"$(nproc)" check
 make install
-

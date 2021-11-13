@@ -1,5 +1,5 @@
 #!/bin/bash
+set -o errexit -o noglob -o nounset -o pipefail
 
 swtpm_ioctl -i --tcp :2322
 tpm2_startup -c
-
